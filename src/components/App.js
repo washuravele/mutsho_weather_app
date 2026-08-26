@@ -2,9 +2,11 @@ import React from 'react';
 import NavBar from './NavagationBar/NavBar';
 import './App.css';
 import Hero from './HeroPage/Hero';
+import SearchCity from './SearchInput/SearchCity';
+import DisplayWeather from './DisplaySearch/DisplayWeather';
 
 class App extends React.Component {
-  state = { lat: null, lon: null, locationError: '' };
+  state = { lat: null, lon: null, locationError: '', city: '' };
 
   /*get the user location*/
   componentDidMount() {
@@ -21,6 +23,10 @@ class App extends React.Component {
     );
   }
 
+  onFormSubmit(city) {
+    this.setState({ city: city });
+  }
+
   render() {
     return (
       <div className="app-container">
@@ -34,6 +40,8 @@ class App extends React.Component {
             lon={this.state.lon}
             error={this.state.locationError}
           />
+          <SearchCity formCity={this.onFormSubmit} />
+          <DisplayWeather />
         </div>
       </div>
     );

@@ -1,0 +1,15 @@
+.search-city-c{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search-city-c > form {
+    margin-left: 35px;
+}
+
+
+.search-city-c > form > div {
+    width: 460px;
+}
