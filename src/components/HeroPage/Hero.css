@@ -1,0 +1,134 @@
+.hero {
+  border: 1px solid rgb(96, 173, 250);
+  width: 98%;
+  margin-top: 10px;
+  height: 320px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+  margin-left: 10px;
+  background-image: url('/public/Background/sunset-sky.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/*user location weather*/
+.user-container {
+  /* border: 1px solid red;
+  background-color: white;*/
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+/*weather today */
+.user-cA {
+  border: 1px solid rgb(96, 173, 250);
+  background-color: white;
+  width: 450px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+}
+
+.user-location {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 6px;
+  border-radius: 15px;
+}
+
+.user-date {
+  margin-left: 10px;
+}
+.user-date > p {
+  font-weight: 700;
+}
+.user-location-name {
+  margin-right: 10px;
+}
+.user-location-name > p {
+  font-weight: 700;
+}
+
+.user-icon-weather {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.weather-icon {
+  width: 200px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.temp {
+  font-size: 50px;
+}
+
+/*user-cB forecast data*/
+.user-cB {
+  display: flex;
+  /* border: 1px solid red;*/
+  width: 800px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.forecastContainer {
+  border: 1px solid rgb(96, 173, 250);
+  width: 100px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  margin-left: 10px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+}
+
+.weather-icon-forecast {
+  width: 90px;
+  height: 90px;
+}
+
+/*date*/
+.current-date {
+  display: flex;
+  /* border: 1px solid red;*/
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: 15px;
+  font-size: 17px;
+}
+.current-date > p {
+  font-weight: 600;
+}
+
+/*font*/
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

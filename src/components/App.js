@@ -28,7 +28,7 @@ class App extends React.Component {
           <NavBar />
         </div>
 
-        <div>
+        <div className="content">
           <Hero
             lat={this.state.lat}
             lon={this.state.lon}
