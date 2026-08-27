@@ -21,11 +21,12 @@ class App extends React.Component {
         this.setState({ locationError: err.message });
       }
     );
+    this.onFormSubmit('');
   }
 
-  onFormSubmit(city) {
+  onFormSubmit = (city) => {
     this.setState({ city: city });
-  }
+  };
 
   render() {
     return (
@@ -41,7 +42,7 @@ class App extends React.Component {
             error={this.state.locationError}
           />
           <SearchCity formCity={this.onFormSubmit} />
-          <DisplayWeather />
+          <DisplayWeather city={this.state.city} />
         </div>
       </div>
     );

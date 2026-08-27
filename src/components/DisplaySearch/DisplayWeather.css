@@ -1,0 +1,126 @@
+.cityDisplayC {
+  /*border: 1px solid red;*/
+  margin-top: 15px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*cityweather container*/
+.cityWeatherC {
+  /*border: 1px solid rgb(96, 173, 250);*/
+  width: 70%;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px 2px black;
+  margin-left: 30px;
+}
+
+.open {
+  /* border: 1px solid red;*/
+  height: 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.openD {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+/*weather city content*/
+.cityWeatherContent {
+  /*  border: 1px solid blue;*/
+  margin-top: 5px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.cityWeatherCard {
+  border: 1px solid;
+  width: 20%;
+  height: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px black;
+  gap: 10px;
+  background-color: white;
+}
+
+.cityIcon {
+  /*border: 1px solid red;*/
+  width: 180px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*cityWeatherContentB  have forecast and description*/
+.cityWeatherCardB {
+  /*border: 1px solid red;*/
+  width: 78%;
+  height: 220px;
+}
+
+.description {
+  background-color: white;
+  width: 300px;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+span {
+  color: rgb(96, 173, 250);
+}
+
+.cityTemp {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/*font*/
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*animation*/
+.gradient-background {
+  background: linear-gradient(
+    300deg,
+    rgb(96, 173, 250),
+    rgb(45, 40, 40),
+    rgb(96, 173, 250)
+  );
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
