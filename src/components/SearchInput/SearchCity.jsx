@@ -12,6 +12,7 @@ class SearchCity extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
     this.props.formCity(this.state.city);
+    this.setState({ city: '' });
   };
 
   render() {

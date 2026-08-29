@@ -3,6 +3,9 @@ import OpenWeather from '../../apis/OpenWeather';
 import './DisplayWeather.css';
 import CityWeather from './CityWeather';
 import CityWeatherDescription from './CityWeatherDescription';
+import WeatherMessageAlerts from './WeatherMessageAlerts';
+import WeatherLoader from './WeatherLoader';
+import CityWeatherForecastData from './CityWeatherForecastData';
 
 class DisplayWeather extends React.Component {
   state = {
@@ -12,7 +15,11 @@ class DisplayWeather extends React.Component {
     country: '',
     description: '',
     temp: '',
+    tempMin: '',
+    tempMax: '',
+    pressure: '',
     weatherError: '',
+    list: [],
   };
 
   getWeather = async () => {
@@ -23,8 +30,20 @@ class DisplayWeather extends React.Component {
         },
       });
 
+      const responesF = await OpenWeather.get('/forecast', {
+        params: {
+          q: this.props.city,
+        },
+      });
+
+      this.setState({ list: responesF.data.list });
+
       const temp_k = responesW.data.main.temp;
       var temp_c = Math.round(temp_k - 273.15);
+
+      let tempMinC = Math.round(responesW.data.main.temp_min - 273.15);
+      let tempMaxC = Math.round(responesW.data.main.temp_max - 273.15);
+      let pressureInHg = Math.round(responesW.data.main.pressure * 0.02953);
 
       this.setState({
         main: responesW.data.weather[0].main,
@@ -33,6 +52,9 @@ class DisplayWeather extends React.Component {
         country: responesW.data.sys.country,
         description: responesW.data.weather[0].description,
         temp: temp_c,
+        tempMin: tempMinC,
+        tempMax: tempMaxC,
+        pressure: pressureInHg,
         weatherError: '',
       });
     } catch (error) {
@@ -44,7 +66,7 @@ class DisplayWeather extends React.Component {
   conditionalRender = () => {
     if (this.props.city && !this.state.weatherError) {
       return (
-        <div className="gradient-background cityWeatherC">
+        <div className="cityWeatherC">
           <div className="open">
             <div>
               <p
@@ -71,17 +93,25 @@ class DisplayWeather extends React.Component {
                 city={this.state.city_name}
                 country={this.state.country}
                 desc={this.state.description}
+                tempMin={this.state.tempMin}
+                tempMax={this.state.tempMax}
+                pressure={this.state.pressure}
               />
+              <CityWeatherForecastData list={this.state.list} />
             </div>
           </div>
         </div>
       );
     }
     if (!this.props.city && this.state.weatherError) {
-      return <div>show show</div>;
+      return (
+        <div>
+          <WeatherMessageAlerts />
+        </div>
+      );
     }
 
-    return <h1>loading</h1>;
+    return <WeatherLoader />;
   };
   render() {
     this.getWeather();

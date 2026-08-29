@@ -21,15 +21,15 @@ function CityWeatherDescription(props) {
       <div className="cityTemp">
         <div>
           {' '}
-          <i class="thermometer empty icon"></i> <span>77</span>
+          <i class="thermometer empty icon"></i> <span>{props.tempMin}</span>
         </div>
         <div>
-          <i class="thermometer full icon"></i> <span>99</span>
+          <i class="thermometer full icon"></i> <span>{props.tempMax}</span>
         </div>
 
         <div>
           <i class="tachometer alternate icon"></i>
-          <span>54</span>
+          <span>{props.pressure}</span>
         </div>
       </div>
     </div>
