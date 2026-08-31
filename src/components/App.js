@@ -6,7 +6,7 @@ import SearchCity from './SearchInput/SearchCity';
 import DisplayWeather from './DisplaySearch/DisplayWeather';
 
 class App extends React.Component {
-  state = { lat: null, lon: null, locationError: '', city: '' };
+  state = { lat: null, lon: null, locationError: '', city: '', theme: 'light' };
 
   /*get the user location*/
   componentDidMount() {
@@ -28,11 +28,18 @@ class App extends React.Component {
     this.setState({ city: city });
   };
 
+  toggleTheme = () => {
+    this.setState((prevState) => ({
+      theme: prevState.theme === 'light' ? 'dark' : 'light',
+    }));
+  };
+
   render() {
     return (
-      <div className="app-container">
+      /*display the navbar  the content*/
+      <div className={`app-container-${this.state.theme}  `}>
         <div>
-          <NavBar />
+          <NavBar toggleTheme={this.toggleTheme} />
         </div>
 
         <div className="content">

@@ -1,5 +1,5 @@
-.app-container {
-  /*background-color: aqua;
+.app-container-light {
+  /* background-color: black;
   border: 3px solid black;*/
   height: 100vh;
   padding: 0%;
@@ -7,6 +7,12 @@
   cursor: default;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.app-container-dark {
+  background-color: black;
+  color: white;
 }
 
 .content {

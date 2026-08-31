@@ -1,26 +1,28 @@
 import React from 'react';
 
-function CityWeatherForecastCard() {
+function CityWeatherForecastCard(props) {
+  const temp_k = props.temp;
+  var temp_c = Math.round(temp_k - 273.15);
   return (
-    <div className="forecastCard">
+    <div className="  forecastCard">
       <div className="forecastCardIcon">
         <div className="forecast-date">
-          <p>13:00</p>
+          <p>{props.date.substr(11, 5)}</p>
         </div>
         <div
           className="forecast-icon"
           style={{
-            backgroundImage: `url(https://openweathermap.org/img/wn/10d@2x.png)`,
+            backgroundImage: `url(https://openweathermap.org/img/wn/${props.icon}@2x.png)`,
           }}
         ></div>
-        <div className="forecast-temp">27&deg;</div>
+        <div className="forecast-temp">{temp_c}&deg;</div>
       </div>
       <div className="forecastDescription">
         <div>
-          <p>Broken Clouds</p>
+          <p>{props.description}</p>
         </div>
         <div>
-          <p>2015/12/04</p>
+          <p>{props.date.substring(0, 10)}</p>
         </div>
       </div>
     </div>

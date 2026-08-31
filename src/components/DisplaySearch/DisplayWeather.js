@@ -30,14 +30,6 @@ class DisplayWeather extends React.Component {
         },
       });
 
-      const responesF = await OpenWeather.get('/forecast', {
-        params: {
-          q: this.props.city,
-        },
-      });
-
-      this.setState({ list: responesF.data.list });
-
       const temp_k = responesW.data.main.temp;
       var temp_c = Math.round(temp_k - 273.15);
 
@@ -97,7 +89,7 @@ class DisplayWeather extends React.Component {
                 tempMax={this.state.tempMax}
                 pressure={this.state.pressure}
               />
-              <CityWeatherForecastData list={this.state.list} />
+              <CityWeatherForecastData city={this.props.city} />
             </div>
           </div>
         </div>

@@ -1,9 +1,10 @@
 .cityDisplayC {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   margin-top: 15px;
   height: 300px;
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: center;*/
 }
 
 /*cityweather container*/
@@ -12,12 +13,12 @@
   width: 70%;
   border-radius: 15px;
   padding: 5px;
-  box-shadow: 2px 2px 2px 2px black;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
   margin-left: 30px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('/public/Background/natural-sky.jpg ');
+  background-image: url('/public/Background/silhouettes-hills.jpg ');
 }
 
 .open {
@@ -48,7 +49,6 @@
 }
 
 .cityWeatherCard {
-  border: 1px solid;
   width: 20%;
   height: 220px;
   display: flex;
@@ -57,7 +57,7 @@
   align-items: center;
   padding: 4px;
   border-radius: 15px;
-  box-shadow: 1px 1px 1px 1px black;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
   gap: 10px;
   background-color: white;
 }
@@ -83,7 +83,7 @@
   width: 300px;
   border-radius: 15px;
   padding: 5px;
-  box-shadow: 1px 1px 1px 1px black;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
 }
 
 span {
@@ -107,12 +107,7 @@ span {
 
 /*animation*/
 .gradient-background {
-  background: linear-gradient(
-    300deg,
-    rgb(96, 173, 250),
-    rgb(45, 40, 40),
-    rgb(96, 173, 250)
-  );
+  background: linear-gradient(300deg, white, rgb(45, 40, 40), white);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
 }
@@ -194,16 +189,15 @@ span {
 
 /*City Weather forecast data*/
 .forecastData {
-  border: 1px solid green;
+  /* border: 1px solid green;*/
   height: 130px;
 }
 
 .forecastC {
-  border: 1px solid;
   height: 110px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 25px;
 }
@@ -213,7 +207,7 @@ span {
   width: 200px;
   height: 100%;
   border-radius: 15px;
-  border: 2px 2px 2px 2px rgb(96, 173, 250);
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
   display: flex;
   flex-wrap: wrap;
 }
