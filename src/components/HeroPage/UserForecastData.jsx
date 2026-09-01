@@ -6,7 +6,7 @@ function UserForecastData(props) {
   var temp_c = Math.round(temp_k - 273.15);
 
   return (
-    <div className="forecastContainer">
+    <div className={`forecastContainer-${props.theme}`}>
       <div>{time.substring(11, 16)}</div>
       <div
         className="weather-icon-forecast"

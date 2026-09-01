@@ -29,7 +29,7 @@
 }
 
 /*weather today */
-.user-cA {
+.user-cA-light {
   border: 1px solid rgb(96, 173, 250);
   background-color: white;
   background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
@@ -39,6 +39,17 @@
   flex-wrap: wrap;
   flex-direction: column;
   box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+}
+.user-cA-dark {
+  border: 1px solid rgb(96, 173, 250);
+  width: 450px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+  background-color: #000000;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-wall.png');
 }
 
 .user-location {
@@ -92,7 +103,7 @@
   justify-content: center;
 }
 
-.forecastContainer {
+.forecastContainer-light {
   border: 1px solid rgb(96, 173, 250);
   width: 100px;
   height: 150px;
@@ -107,6 +118,21 @@
   background-color: white;
   background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
   box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+}
+.forecastContainer-dark {
+  border: 1px solid rgb(96, 173, 250);
+  width: 100px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  margin-left: 10px;
+  border-radius: 15px;
+  background-color: #000000;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-wall.png');
 }
 
 .weather-icon-forecast {

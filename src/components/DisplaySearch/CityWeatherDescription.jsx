@@ -2,7 +2,7 @@ import React from 'react';
 
 function CityWeatherDescription(props) {
   return (
-    <div className="description">
+    <div className={`description-${props.theme}`}>
       <div>
         <p className="montserrat" style={{ fontWeight: '700' }}>
           City Name: <span>{props.city}</span>

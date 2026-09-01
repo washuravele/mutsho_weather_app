@@ -3,7 +3,7 @@ import './Hero.css';
 
 function UserLocationWeather(props) {
   return (
-    <div className="user-cA  montserrat">
+    <div className={`user-cA-${props.theme}   montserrat`}>
       <div className="user-location">
         <div className="user-date">
           <p>Now</p>

@@ -4,7 +4,7 @@ function CityWeatherForecastCard(props) {
   const temp_k = props.temp;
   var temp_c = Math.round(temp_k - 273.15);
   return (
-    <div className="  forecastCard">
+    <div className={`forecastCard-${props.theme}`}>
       <div className="forecastCardIcon">
         <div className="forecast-date">
           <p>{props.date.substr(11, 5)}</p>

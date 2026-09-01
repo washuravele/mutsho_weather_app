@@ -41,6 +41,7 @@ class CityWeatherForecastData extends React.Component {
                   icon={list.weather[0].icon}
                   date={list.dt_txt}
                   temp={list.main.temp}
+                  theme={this.props.theme}
                 />
               );
             }

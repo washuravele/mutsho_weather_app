@@ -1,4 +1,4 @@
-.navBar {
+.navBar-light {
   border: 1px solid rgb(96, 173, 250);
   display: flex;
   flex-direction: column;
@@ -17,6 +17,25 @@
   background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
 }
 
+.navBar-dark {
+  border: 1px solid rgb(96, 173, 250);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 6%;
+  height: 97%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+  position: fixed;
+  background-color: #000000;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-wall.png');
+}
+
 .navBar-details {
   border-right: 2px solid rgb(96, 173, 250);
   box-shadow: 1px 1px 1px rgb(96, 173, 250);
@@ -30,25 +49,57 @@
   border-radius: 15px;
 }
 
-.img-logo {
+.img-logo-light {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
-  width: 55px;
-  height: 55px;
-
+  width: 60px;
+  height: 60px;
   padding: 12px;
   border-radius: 50%;
   cursor: pointer;
 }
-.img-logo:hover {
+.img-logo-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  width: 60px;
+  height: 60px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.img-logo-light:hover {
   border: 1px solid rgb(96, 173, 250);
 }
 
-.img-logo > img {
+.img-logo-dark:hover {
+  border: 1px solid rgb(96, 173, 250);
+}
+
+.img-logo-light > img {
   width: 100%;
   height: 100%;
+}
+
+.img-logo-dark > img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.logo-for-light {
+  display: none;
+}
+.logo-for-dark {
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/Icons/mutsho_logo_dark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .theme {
@@ -141,7 +192,7 @@
   align-items: center;
 }
 
-.about-content {
+.about-content-light {
   position: relative;
   width: 900px;
   /* height: 300px;*/
@@ -153,12 +204,25 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.about-content-dark {
+  position: relative;
+  width: 900px;
+  /* height: 300px;*/
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-wall.png');
+}
 
 .close-about {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   padding: 2px;
+  margin-top: 5px;
 }
 .close-btn {
   cursor: pointer;

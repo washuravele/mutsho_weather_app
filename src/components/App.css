@@ -11,8 +11,16 @@
 }
 
 .app-container-dark {
-  background-color: black;
   color: white;
+  height: 100vh;
+  padding: 0%;
+  margin: 0%;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #000000;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-wall.png');
 }
 
 .content {

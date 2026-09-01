@@ -14,14 +14,15 @@ function NavBar(props) {
 
   return (
     <>
-      <div className="navBar">
+      <div className={`navBar-${props.logo}`}>
         <div className="navBar-details">
-          <div onClick={onOverlayerHandle} className="img-logo">
-            <img alt="logo" src="/Icons/mutsho_logo.png" />
+          <div onClick={onOverlayerHandle} className={`img-logo-${props.logo}`}>
+            <img alt="logo" src={`/Icons/mutsho_logo_${props.logo}.png`} />
+            <div className={`logo-for-${props.logo}`}></div>
           </div>
           <div className="about"></div>
-          <div className="theme">
-            <img alt="logo" src="/Icons/light-mode.png" />
+          <div onClick={props.toggleTheme} className="theme">
+            <img alt="logo" src={`/Icons/${props.logo}-mode.png`} />
           </div>
         </div>
         <div className="navBar-animation">
@@ -42,7 +43,7 @@ function NavBar(props) {
 
       {showOverLayer && (
         <div id="about">
-          <div className="about-content">
+          <div className={`about-content-${props.logo}`}>
             <div className="close-about">
               <div className="close-btn" onClick={offOverlayerHandle}>
                 <img alt="close button" src="/icons/icon-close.png" />

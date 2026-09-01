@@ -2,7 +2,7 @@ import React from 'react';
 
 function CityWeather(props) {
   return (
-    <div className="cityWeatherCard">
+    <div className={`cityWeatherCard-${props.theme}`}>
       <div
         className="cityIcon"
         style={{

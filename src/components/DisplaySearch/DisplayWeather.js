@@ -59,7 +59,7 @@ class DisplayWeather extends React.Component {
     if (this.props.city && !this.state.weatherError) {
       return (
         <div className="cityWeatherC">
-          <div className="open">
+          <div className={`open`}>
             <div>
               <p
                 className="montserrat"
@@ -72,13 +72,14 @@ class DisplayWeather extends React.Component {
                 Now Weather
               </p>
             </div>
-            <div className="openD"></div>
+            <div className={`openD-${this.props.theme}`}></div>
           </div>
           <div className="cityWeatherContent">
             <CityWeather
               icon={this.state.icon}
               main={this.state.main}
               temp={this.state.temp}
+              theme={this.props.theme}
             />
             <div className="cityWeatherCardB">
               <CityWeatherDescription
@@ -88,8 +89,12 @@ class DisplayWeather extends React.Component {
                 tempMin={this.state.tempMin}
                 tempMax={this.state.tempMax}
                 pressure={this.state.pressure}
+                theme={this.props.theme}
               />
-              <CityWeatherForecastData city={this.props.city} />
+              <CityWeatherForecastData
+                theme={this.props.theme}
+                city={this.props.city}
+              />
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ class App extends React.Component {
       /*display the navbar  the content*/
       <div className={`app-container-${this.state.theme}  `}>
         <div>
-          <NavBar toggleTheme={this.toggleTheme} />
+          <NavBar toggleTheme={this.toggleTheme} logo={this.state.theme} />
         </div>
 
         <div className="content">
@@ -47,9 +47,10 @@ class App extends React.Component {
             lat={this.state.lat}
             lon={this.state.lon}
             error={this.state.locationError}
+            theme={this.state.theme}
           />
-          <SearchCity formCity={this.onFormSubmit} />
-          <DisplayWeather city={this.state.city} />
+          <SearchCity formCity={this.onFormSubmit} theme={this.state.theme} />
+          <DisplayWeather city={this.state.city} theme={this.state.theme} />
         </div>
       </div>
     );

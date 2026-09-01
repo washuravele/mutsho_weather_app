@@ -57,11 +57,18 @@ class Hero extends React.Component {
               name={this.state.loc_name}
               temp={this.state.temp}
               icon={this.state.weather_icon}
+              theme={this.props.theme}
             />
             <div className="user-cB  montserrat">
               {this.state.listForecast.map((list, i) => {
                 while (i > 0 && i < 7) {
-                  return <UserForecastData key={i} list={list} />;
+                  return (
+                    <UserForecastData
+                      key={i}
+                      list={list}
+                      theme={this.props.theme}
+                    />
+                  );
                 }
                 return null;
               })}

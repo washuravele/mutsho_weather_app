@@ -26,8 +26,12 @@ class SearchCity extends React.Component {
               style={{
                 border: '1px solid rgb(96, 173, 250)',
                 boxShadow: '1px 1px 1px 1px rgb(96, 173, 250)',
+                backgroundImage:
+                  this.props.theme === 'light'
+                    ? "url('https://www.transparenttextures.com/patterns/concrete-wall.png')"
+                    : "url('https://www.transparenttextures.com/patterns/dark-wall.png')",
               }}
-              class="prompt"
+              className={`prompt ${this.props.theme}`}
               type="text"
               placeholder="Search City..."
               onChange={this.onInput}
