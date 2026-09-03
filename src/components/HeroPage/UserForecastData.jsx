@@ -14,7 +14,9 @@ function UserForecastData(props) {
           backgroundImage: `url(https://openweathermap.org/img/wn/${props.list.weather[0].icon}@2x.png)`,
         }}
       ></div>
-      <div>{temp_c}&deg;</div>
+      <div>
+        {temp_c}&deg; <span style={{ color: 'rgb(96, 173, 250)' }}>c</span>
+      </div>
     </div>
   );
 }

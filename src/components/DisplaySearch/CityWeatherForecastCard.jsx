@@ -15,7 +15,9 @@ function CityWeatherForecastCard(props) {
             backgroundImage: `url(https://openweathermap.org/img/wn/${props.icon}@2x.png)`,
           }}
         ></div>
-        <div className="forecast-temp">{temp_c}&deg;</div>
+        <div className="forecast-temp">
+          {temp_c}&deg <span>C</span>;
+        </div>
       </div>
       <div className="forecastDescription">
         <div>

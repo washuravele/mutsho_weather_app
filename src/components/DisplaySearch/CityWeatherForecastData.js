@@ -16,7 +16,7 @@ class CityWeatherForecastData extends React.Component {
   };
 
   render() {
-    this.getWeather();
+    /* this.getWeather();*/
     return (
       <div className="forecastData">
         <div>

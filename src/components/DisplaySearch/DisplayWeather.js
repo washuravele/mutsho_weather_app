@@ -111,7 +111,7 @@ class DisplayWeather extends React.Component {
     return <WeatherLoader />;
   };
   render() {
-    this.getWeather();
+    /*this.getWeather();*/
     return <div className="cityDisplayC">{this.conditionalRender()}</div>;
   }
 }
