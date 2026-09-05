@@ -69,7 +69,6 @@ class DisplayWeather extends React.Component {
         weatherError: '',
       });
     } catch (error) {
-      console.log('Weather API error:', error.response?.data);
       this.setState({ weatherError: 'error' });
     }
   };
