@@ -1,0 +1,17 @@
+.FooterC {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.FooterC > div {
+  margin-right: 17px;
+}
+
+@media (max-width: 650px) {
+  .FooterC {
+    justify-content: center;
+    margin-right: 0px;
+  }
+}

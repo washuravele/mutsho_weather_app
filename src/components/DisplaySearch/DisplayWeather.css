@@ -156,57 +156,6 @@ span {
   }
 }
 
-/*Weather message  alerts */
-
-.alerts {
-  /* border: 1px solid green;*/
-  width: 1400px;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.Block {
-  /* border: 2px solid red;*/
-  height: 45%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.rondomBlock1 {
-  justify-content: center;
-  gap: 100px;
-}
-.rondomBlock1 > div {
-  border: 1px solid rgb(96, 173, 250);
-  width: 250px;
-  /* height: 100%;*/
-  border-radius: 15px;
-  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  font-size: 20px;
-}
-
-.rondomBlock2 {
-  justify-content: space-around;
-}
-.rondomBlock2 > div {
-  border: 1px solid rgb(96, 173, 250);
-  width: 250px;
-  height: 100%;
-  border-radius: 15px;
-  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  font-size: 20px;
-}
-
 /*loader*/
 .loading-weather {
   /*border: 1px solid green;*/
@@ -285,4 +234,184 @@ span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+/*Weather message  alerts */
+.alerts {
+  /*border: 2px solid green;*/
+  width: 1410px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.alertImgs {
+  /* border: 2px solid rgb(96, 173, 250);*/
+  width: 45%;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  /*  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);*/
+}
+.img-main {
+  width: 75%;
+  border-radius: 15px;
+  background-image: url('/public/Background/sunset-sky.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+}
+.img-main:hover {
+  opacity: 0.5;
+}
+
+.main {
+  width: 13%;
+  opacity: 0.5;
+}
+.main:hover {
+  opacity: 1;
+}
+
+.img-first {
+  width: 14%;
+  border-radius: 15px;
+  background-image: url('/public/Background/silhouettes-hills.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+}
+.img-first:hover {
+  opacity: 1;
+}
+
+.first {
+  width: 75%;
+  opacity: 1;
+}
+
+.first:hover {
+  width: 75%;
+  opacity: 0.5;
+}
+.img-second {
+  width: 11%;
+  border-radius: 15px;
+
+  background-image: url('/public/Background/natural-sky.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  box-shadow: 1px 1px 1px 1px rgb(96, 173, 250);
+}
+
+.img-second:hover {
+  opacity: 1;
+}
+.second {
+  width: 73%;
+  opacity: 1;
+}
+.second:hover {
+  opacity: 0.5;
+}
+.alertMessages {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  border-left: 2px solid rgb(96, 173, 250);
+}
+
+.alertMessages > div {
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+@media (max-width: 1406px) {
+  .cityDisplayC {
+    width: auto;
+    justify-content: center;
+  }
+  .alerts {
+    width: auto;
+  }
+  .alertImgs {
+    width: 55%;
+  }
+}
+@media (max-width: 1210px) {
+  .cityWeatherC {
+    width: auto;
+  }
+}
+
+@media (max-width: 950px) {
+  .cityWeatherC {
+    margin-left: 0px;
+    width: 98%;
+    margin-left: 10px;
+    height: auto;
+  }
+  .cityDisplayC {
+    height: auto;
+  }
+  .cityWeatherCardB {
+    height: auto;
+    width: auto;
+  }
+  .cityWeatherContent {
+    height: auto;
+  }
+  .cityWeatherCard-light {
+    height: auto;
+    width: auto;
+  }
+  .cityWeatherCard-dark {
+    height: auto;
+    width: auto;
+  }
+  .forecastData {
+    margin-bottom: 15px;
+    height: auto;
+    gap: 5px;
+  }
+
+  .forecastCard-light {
+    height: auto;
+  }
+  .forecastCard-dark {
+    height: auto;
+  }
+  .forecastC {
+    height: auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .cityDisplayC {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .alerts {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .alertImgs {
+    display: none;
+  }
+  .alertMessages {
+    width: auto;
+    border: none;
+    margin-bottom: 20px;
+  }
 }

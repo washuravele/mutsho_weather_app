@@ -11,8 +11,8 @@ class Hero extends React.Component {
     weather_icon: '',
     listForecast: [],
     backgroundImg: '',
-    hour: '',
-    minute: '',
+    hour: new Date().getHours(),
+    minute: new Date().getMinutes(),
   };
   componentDidMount() {
     this.getHeroBackgroundImage();
@@ -77,10 +77,7 @@ class Hero extends React.Component {
       'silhouettes-hills.jpg',
       'sunset-sky.jpg',
     ];
-    this.setState({
-      hour: new Date().getHours(),
-      minute: new Date().getMinutes(),
-    });
+
     setTimeout(() => {
       this.setState({ backgroundImg: 'natural-sky.jpg' });
     });
@@ -123,7 +120,7 @@ class Hero extends React.Component {
   };
 
   render() {
-    /* this.getWeather();*/
+    /* this.getWeather();**/
     /* this.getHeroBackgroundImage();*/
     return (
       <div

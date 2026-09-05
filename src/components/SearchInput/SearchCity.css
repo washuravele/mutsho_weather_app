@@ -19,6 +19,20 @@
 }
 
 .dark {
-  background-color: #000000;
-  background-image: url('https://www.transparenttextures.com/patterns/dark-wall.png');
+  background-color: white;
+  background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+}
+
+@media (max-width: 510px) {
+  .search-city-c {
+    margin-top: 10px;
+  }
+  .search-city-c > form > div {
+    width: 300px;
+  }
+}
+@media (max-width: 350px) {
+  .search-city-c > form > div {
+    width: auto;
+  }
 }

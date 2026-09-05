@@ -19,8 +19,21 @@ class DisplayWeather extends React.Component {
     tempMax: '',
     pressure: '',
     weatherError: '',
-    list: [],
+    lists: [],
   };
+
+  componentDidMount() {
+    this.getWeather();
+  }
+
+  componentDidUpdate(prevProps) {
+    /* if (prevProps.city !== this.props.city) {
+      if (this.props.city) {
+      
+      }
+    }*/
+    this.getWeather();
+  }
 
   getWeather = async () => {
     try {
@@ -29,6 +42,12 @@ class DisplayWeather extends React.Component {
           q: this.props.city,
         },
       });
+      const responesF = await OpenWeather.get('/forecast', {
+        params: {
+          q: this.props.city,
+        },
+      });
+      this.setState({ lists: responesF.data.list });
 
       const temp_k = responesW.data.main.temp;
       var temp_c = Math.round(temp_k - 273.15);
@@ -94,6 +113,7 @@ class DisplayWeather extends React.Component {
               <CityWeatherForecastData
                 theme={this.props.theme}
                 city={this.props.city}
+                lists={this.state.lists}
               />
             </div>
           </div>

@@ -16,7 +16,7 @@ function CityWeatherForecastCard(props) {
           }}
         ></div>
         <div className="forecast-temp">
-          {temp_c}&deg <span>C</span>;
+          {temp_c}&deg; <span>C</span>
         </div>
       </div>
       <div className="forecastDescription">

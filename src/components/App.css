@@ -1,3 +1,7 @@
+body {
+  padding: 2px;
+}
+
 .app-container-light {
   /* background-color: black;
   border: 3px solid black;*/
@@ -7,7 +11,6 @@
   cursor: default;
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
 }
 
 .app-container-dark {
@@ -26,4 +29,22 @@
 .content {
   width: 93%;
   /* border: 1px solid red;*/
+}
+
+/*responsinse*/
+
+@media (max-width: 1500px) {
+  /*app css */
+  .app-container-dark {
+    height: auto;
+    display: block;
+  }
+  .app-container-light {
+    height: auto;
+    display: block;
+  }
+
+  .content {
+    width: auto;
+  }
 }

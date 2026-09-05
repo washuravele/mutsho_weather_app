@@ -312,3 +312,50 @@
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 1500px) {
+  .navBar-light {
+    position: static;
+    height: 80px;
+    width: auto;
+  }
+  .navBar-dark {
+    position: static;
+    height: 80px;
+    width: auto;
+  }
+  .navBar-details {
+    width: 98%;
+    flex-direction: row;
+  }
+  .img-logo-light {
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  .img-logo-dark {
+    margin-top: 0px;
+  }
+  .theme {
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+  .navBar-animation {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .about-content-light {
+    height: 98%;
+  }
+  .about-content-dark {
+    height: 98%;
+  }
+  .myPicture {
+    width: auto;
+  }
+  .about-projectB {
+    width: auto;
+    border: none;
+  }
+}

@@ -4,6 +4,7 @@ import './App.css';
 import Hero from './HeroPage/Hero';
 import SearchCity from './SearchInput/SearchCity';
 import DisplayWeather from './DisplaySearch/DisplayWeather';
+import Footer from './Footer/Footer';
 
 class App extends React.Component {
   state = { lat: null, lon: null, locationError: '', city: '', theme: 'light' };
@@ -51,6 +52,7 @@ class App extends React.Component {
           />
           <SearchCity formCity={this.onFormSubmit} theme={this.state.theme} />
           <DisplayWeather city={this.state.city} theme={this.state.theme} />
+          <Footer />
         </div>
       </div>
     );

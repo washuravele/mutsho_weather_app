@@ -29,7 +29,7 @@ class SearchCity extends React.Component {
                 backgroundImage:
                   this.props.theme === 'light'
                     ? "url('https://www.transparenttextures.com/patterns/concrete-wall.png')"
-                    : "url('https://www.transparenttextures.com/patterns/dark-wall.png')",
+                    : "url('https://www.transparenttextures.com/patterns/concrete-wall.png')",
               }}
               className={`prompt ${this.props.theme}`}
               type="text"

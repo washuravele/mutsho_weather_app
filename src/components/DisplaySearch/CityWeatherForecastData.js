@@ -3,7 +3,7 @@ import OpenWeather from '../../apis/OpenWeather';
 import CityWeatherForecastCard from './CityWeatherForecastCard';
 
 class CityWeatherForecastData extends React.Component {
-  state = { lists: [] };
+  /*  state = { lists: [] };
 
   getWeather = async () => {
     const responesF = await OpenWeather.get('/forecast', {
@@ -13,7 +13,7 @@ class CityWeatherForecastData extends React.Component {
     });
 
     this.setState({ lists: responesF.data.list });
-  };
+  };*/
 
   render() {
     /* this.getWeather();*/
@@ -32,7 +32,7 @@ class CityWeatherForecastData extends React.Component {
           </p>
         </div>
         <div className="forecastC">
-          {this.state.lists.map((list, i) => {
+          {this.props.lists.map((list, i) => {
             while (i > 0 && i < 4) {
               return (
                 <CityWeatherForecastCard

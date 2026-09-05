@@ -1,0 +1,54 @@
+{
+  "clear": {
+    "alert": "Clear skies today ☀️",
+    "advice": "Great weather! Stay hydrated, use sunscreen, and enjoy the outdoors."
+  },
+  "sunny": {
+    "alert": "Sunny weather ☀️",
+    "advice": "Wear sunscreen, drink plenty of water, and consider wearing sunglasses."
+  },
+  "clouds": {
+    "alert": "Cloudy weather ☁️",
+    "advice": "The weather is cloudy. You can go outside, but keep a light jacket nearby."
+  },
+  "rain": {
+    "alert": "Rain expected 🌧️",
+    "advice": "Take an umbrella or raincoat and be careful on wet roads and slippery surfaces."
+  },
+  "drizzle": {
+    "alert": "Light rain/drizzle 🌦️",
+    "advice": "A light jacket or umbrella may be useful. Roads may be slippery."
+  },
+  "thunderstorm": {
+    "alert": "Thunderstorm warning ⛈️",
+    "advice": "Stay indoors if possible. Avoid open areas, tall trees, and unnecessary travel."
+  },
+  "snow": {
+    "alert": "Snowy conditions ❄️",
+    "advice": "Dress warmly and be careful because roads and walkways may be slippery."
+  },
+  "mist": {
+    "alert": "Misty weather 🌫️",
+    "advice": "Visibility may be reduced. Drive carefully and use your headlights when necessary."
+  },
+  "fog": {
+    "alert": "Foggy conditions 🌫️",
+    "advice": "Visibility may be poor. Slow down when driving and keep a safe following distance."
+  },
+  "wind": {
+    "alert": "Strong winds 🌬️",
+    "advice": "Be careful around trees and loose objects. Secure outdoor items if necessary."
+  },
+  "hot": {
+    "alert": "High temperature warning 🔥",
+    "advice": "Drink plenty of water, avoid prolonged direct sunlight, and stay cool."
+  },
+  "cold": {
+    "alert": "Cold weather warning 🥶",
+    "advice": "Wear warm clothing and limit prolonged exposure to the cold."
+  },
+  "default": {
+    "alert": "Weather update 🌤️",
+    "advice": "Check the forecast before going outside and dress appropriately for the conditions."
+  }
+}
