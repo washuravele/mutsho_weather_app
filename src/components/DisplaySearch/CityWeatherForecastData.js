@@ -1,5 +1,4 @@
 import React from 'react';
-import OpenWeather from '../../apis/OpenWeather';
 import CityWeatherForecastCard from './CityWeatherForecastCard';
 
 class CityWeatherForecastData extends React.Component {
