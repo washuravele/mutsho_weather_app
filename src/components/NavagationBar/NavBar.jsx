@@ -46,7 +46,7 @@ function NavBar(props) {
           <div className={`about-content-${props.logo}`}>
             <div className="close-about">
               <div className="close-btn" onClick={offOverlayerHandle}>
-                <img alt="close button" src="/icons/icon-close.png" />
+                <img alt="close button" src="/Icons/icon-close.png" />
               </div>
             </div>
             <div className="about-project">
