@@ -35,6 +35,7 @@ class WeatherMessageAlerts extends React.Component {
     this.randomMessages();
     this.interval = setInterval(() => {
       this.randomMessages();
+      this.selectedRandomPicture();
     }, 6000);
   }
 
